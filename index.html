@@ -1,183 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Galaxy S23 – Future in Your Hands</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galaxy S25 – Future in Your Hands</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      margin: 0;
-      font-family: 'Helvetica Neue', sans-serif;
-      background-color: #f4f6f8;
-      color: #1a1a1a;
-      line-height: 1.6;
+      font-family: 'Noto Sans JP', sans-serif;
+      background-color: #f0f4f8;
     }
-
     header {
-      background: linear-gradient(135deg, #0077ff, #00c3ff);
-      color: #fff;
-      padding: 60px 20px;
+      background: linear-gradient(135deg, #004e92, #000428);
+      color: white;
+      padding: 80px 0;
       text-align: center;
     }
-
-    header h1 {
-      margin: 0;
-      font-size: 3rem;
+    .feature-card {
+      transition: transform 0.3s;
     }
-
-    header p {
-      margin-top: 10px;
-      font-size: 1.25rem;
+    .feature-card:hover {
+      transform: scale(1.05);
     }
-
-    .section {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 2rem;
-      color: #333;
-    }
-
-    .benefits {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-    }
-
-    .benefit-box {
-      background: #fff;
-      border-radius: 12px;
-      padding: 25px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.07);
-      transition: transform 0.2s;
-      text-align: center;
-    }
-
-    .benefit-box:hover {
-      transform: translateY(-5px);
-    }
-
-    .benefit-box h3 {
-      margin-top: 10px;
-      font-size: 1.2rem;
+    .benefit-icon {
+      font-size: 2.5rem;
       color: #0077ff;
     }
-
-    .product {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 40px;
-      justify-content: center;
-    }
-
-    .product img {
+    .product-img {
+      width: 100%;
       max-width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      height: auto;
+      object-fit: cover;
+      image-rendering: auto;
+      border-radius: 1rem;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
     }
-
-    .product-details {
-      max-width: 450px;
+    .img-thumbnail {
+      width: 300px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
-
-    .product-details h3 {
-      font-size: 1.8rem;
-      color: #0077ff;
-    }
-
-    .cta {
-      background-color: #222;
+    .cta-section {
+      background: linear-gradient(to right, #1f4037, #99f2c8);
       color: white;
+      padding: 80px 20px;
       text-align: center;
-      padding: 60px 20px;
     }
-
-    .cta button {
-      margin-top: 20px;
-      background: #00c3ff;
-      color: white;
+    .btn-primary {
+      background-color: #0077ff;
       border: none;
-      padding: 15px 35px;
-      font-size: 1rem;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: background 0.3s ease;
     }
-
-    .cta button:hover {
-      background: #00a4d6;
-    }
-
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2.2rem;
-      }
-
-      .product {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .product-details {
-        max-width: 100%;
-      }
+    .btn-primary:hover {
+      background-color: #005fcc;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>The Future in Your Hands</h1>
-    <p>Galaxy S23で、あなたの毎日が進化する。撮る・遊ぶ・こなす、すべてがスマートに。</p>
-  </header>
+<header>
+  <div class="container">
+    <h1 class="display-4 fw-bold">Galaxy S25</h1>
+    <p class="lead">次世代の体験を、あなたの手に。</p>
+  </div>
+</header>
 
-  <section class="section">
-    <h2>Galaxy S23 の魅力</h2>
-    <div class="benefits">
-      <div class="benefit-box">
-        ⚙️
-        <h3>マルチタスク性能</h3>
-        <p>高速チップと十分なメモリで、仕事もエンタメもサクサク切り替え。</p>
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card feature-card h-100 text-center p-4">
+          <div class="benefit-icon">⚙️</div>
+          <h5 class="mt-3">高速マルチタスク</h5>
+          <p>新チップ搭載で、ゲームもビジネスも快適に。</p>
+        </div>
       </div>
-      <div class="benefit-box">
-        📸
-        <h3>プロ級のカメラ</h3>
-        <p>50MPの高精細カメラで、ランの風景や日常を美しく記録。</p>
+      <div class="col-md-4">
+        <div class="card feature-card h-100 text-center p-4">
+          <div class="benefit-icon">📸</div>
+          <h5 class="mt-3">超高解像度カメラ</h5>
+          <p>200MPカメラで、細部までクリアに記録。</p>
+        </div>
       </div>
-      <div class="benefit-box">
-        🎮
-        <h3>エンタメ最適化</h3>
-        <p>120Hzのなめらか画面とステレオサウンドで、ゲームも動画も臨場感たっぷり。</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>おすすめアイテム</h2>
-    <div class="product">
-      <img src="https://images.samsung.com/jp/smartphones/galaxy-s25-ultra/buy/kv_global_PC_jp_v2.png?imbypass=true" alt="Samsung Galaxy S23" />
-      <div class="product-details">
-        <h3>Samsung Galaxy S23</h3>
-        <p>高性能カメラとスムーズな操作性で、ランニング中も安心。音楽、ナビ、フィットネス管理がこれ一台。</p>
-        <p><strong>価格:</strong> ¥124,800（税込）<br />送料無料 🚚</p>
+      <div class="col-md-4">
+        <div class="card feature-card h-100 text-center p-4">
+          <div class="benefit-icon">🎮</div>
+          <h5 class="mt-3">エンタメ最適化</h5>
+          <p>144Hzディスプレイで圧倒的な没入感。</p>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="cta">
-    <h2>さあ、走り出そう。</h2>
-    <p>今すぐ購入して、新しいライフスタイルをスタート！</p>
-    <button>購入する</button>
-  </section>
+<section class="py-5 bg-white">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left side: product gallery -->
+      <div class="col-md-6">
+        <!-- Main image -->
+        <img src="https://prcdn.freetls.fastly.net/release_image/30942/696/30942-696-58c92d01c112d7a225b5da06de437bca-1440x720.jpg?format=jpeg&auto=webp&fit=bounds&width=2400&height=1260"
+             alt="Galaxy S25 Main Image"
+             class="product-img mb-3">
 
-  <table cellpadding="0" cellspacing="0" border="0" style=" border:1px solid #ccc; width:300px;"><tbody><tr style="border-style:none;"><td style="vertical-align:top; border-style:none; padding:10px; width:44px;"><a href="https://rpx.a8.net/svt/ejp?a8mat=4534K0+5O7P9U+2HOM+BWGDT&rakuten=y&a8ejpredirect=https%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2Fg00u4hy4.2bo1120f.g00u4hy4.2bo120a4%2Fa25040868000_4534K0_5O7P9U_2HOM_BWGDT%3Fpc%3Dhttps%253A%252F%252Fitem.rakuten.co.jp%252Fxiaomiofficial%252Fm57078%252F%26amp%3Bm%3Dhttp%253A%252F%252Fm.rakuten.co.jp%252Fxiaomiofficial%252Fi%252F10000210%252F%26amp%3Brafcid%3Dwsc_i_is_33f72da33714639c415e592c9633ecd7" rel="nofollow"><img border="0" alt="" src="https://thumbnail.image.rakuten.co.jp/@0_mall/xiaomiofficial/cabinet/10811212/imgrc0099669188.jpg?_ex=64x64" /></a></td><td style="font-size:12px; vertical-align:middle; border-style:none; padding:10px;"><p style="padding:0; margin:0;"><a href="https://rpx.a8.net/svt/ejp?a8mat=4534K0+5O7P9U+2HOM+BWGDT&rakuten=y&a8ejpredirect=https%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2Fg00u4hy4.2bo1120f.g00u4hy4.2bo120a4%2Fa25040868000_4534K0_5O7P9U_2HOM_BWGDT%3Fpc%3Dhttps%253A%252F%252Fitem.rakuten.co.jp%252Fxiaomiofficial%252Fm57078%252F%26amp%3Bm%3Dhttp%253A%252F%252Fm.rakuten.co.jp%252Fxiaomiofficial%252Fi%252F10000210%252F%26amp%3Brafcid%3Dwsc_i_is_33f72da33714639c415e592c9633ecd7" rel="nofollow">POCO F6 Pro スマートフォン 12GB 512GB Snapdragon 8 Gen 2 120W ハイパーチャージ WQHD 120Hzディスプレイ 急速充電 最大5000万画素 連続撮影モード 超広角カメラ マクロカメラ 画面内指紋センサー</a></p><p style="color:#666; margin-top:5px line-height:1.5;">価格:<span style="font-size:14px; color:#C00; font-weight:bold;">79980円～</span><br/><span style="font-size:10px; font-weight:normal;">(2025/4/22 12:41時点)</span><br/><span style="font-weight:bold;">感想(89件)</span></p></td></tr></tbody></table>
-<img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=4534K0+5O7P9U+2HOM+BWGDT" alt="">
+        <!-- Thumbnail images -->
+        <div class="d-flex flex-wrap gap-2">
+          <img src="https://media.assettype.com/thenewsminute/2024-09-30/e3suii7y/3hdr.png?w=1200&h=675&auto=format%2Ccompress&fit=max&enlarge=true" alt="Side view" class="img-thumbnail">
+          <img src="https://images.samsung.com/levant/smartphones/galaxy-s25-ultra/buy/kv_global_MO_v2.jpg" alt="Back view" class="img-thumbnail">
+          <img src="https://www.dpreview.com/files/p/articles/1729410870/Galaxy-Unpacked-camera-breakdown-screenshot.jpeg" alt="Phone in use" class="img-thumbnail">
+          <img src="https://www.writeforustechnology.co.uk/wp-content/uploads/2025/01/Galaxy-S25-Ultra-1.jpg" alt="Phone in use" class="img-thumbnail">
+        </div>
+      </div>
 
+      <!-- Right side: product info -->
+      <div class="col-md-6">
+        <h2 class="fw-bold text-primary">Samsung Galaxy S25</h2>
+        <p>スマートな操作性と洗練されたデザインで、日常がもっと便利に。</p>
+        <p class="fs-5">価格: <strong>¥129,800（税込）</strong><br>送料無料 🚚</p>
+        <a href="#" class="btn btn-primary btn-lg mt-3">今すぐ購入</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2 class="display-6 fw-bold">この春、未来を手に入れよう。</h2>
+    <p class="fs-5 mb-4">Galaxy S25シリーズを購入して、特別な体験を。</p>
+    <a href="#" class="btn btn-light btn-lg">詳細を見る</a>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
